@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MyTelegramBotWithChannelCheck extends TelegramLongPollingBot {
 
-    private final String[] channels = {"Yashirin_guruh_java"};
+    private final String[] channels = {"Yashirin_guruh_java", "channel2"};
     private final String confirmationCallbackData = "check_membership";
 
     @Override
@@ -114,7 +114,7 @@ public class MyTelegramBotWithChannelCheck extends TelegramLongPollingBot {
 //            System.out.println("User status in channel " + channelUsername + ": " + status);
             return !status.equals("left") && !status.equals("kicked");
         } catch (TelegramApiException e) {
-            e.printStackTrace();272
+            e.printStackTrace();
             return false;
         }
     }
